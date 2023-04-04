@@ -151,18 +151,14 @@
 			// Whenever we get a stream from a peer
 			function receivedStream(stream, simplePeerWrapper) {
 				let ovideo = document.createElement("VIDEO");
+				ovideo.style="width: 350px";
+				ovideo.style="height: 350px";
 				ovideo.id = simplePeerWrapper.socket_id;
 				ovideo.srcObject = stream;
-				ovideo.style.position= "absolute";
+				//MASKING CIRCLE
+				ovideo.classList.add ("myvideo-circle");
 				ovideo.style="border-radius :50%";
-				// ovideo.style="width: 350px";
-				// ovideo.style="height: 350px";
-				// div class="ovideo"
-				
-				
-				// ovideo.class="myvideo-circle"; width="300" height="300";
-				// try classs=
-				ovideo.style.top = "px";
+				ovideo.style.top = "0px";
 				ovideo.style.top = "0px";
 				ovideo.onloadedmetadata = function(e) {
 					ovideo.play();
